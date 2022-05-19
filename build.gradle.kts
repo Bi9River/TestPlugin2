@@ -23,6 +23,9 @@ version = properties("pluginVersion")
 repositories {
     mavenCentral()
 }
+dependencies {
+    implementation("org.json:json:20220320")
+}
 
 // Configure Gradle IntelliJ Plugin - read more: https://github.com/JetBrains/gradle-intellij-plugin
 intellij {

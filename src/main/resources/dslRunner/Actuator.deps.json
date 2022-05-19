@@ -1,0 +1,55 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Actuator/1.0.0": {
+        "dependencies": {
+          "Antlr4.Runtime.Standard": "4.10.1",
+          "DSL-Runner": "1.0.0"
+        },
+        "runtime": {
+          "Actuator.dll": {}
+        }
+      },
+      "Antlr4.Runtime.Standard/4.10.1": {
+        "runtime": {
+          "lib/netstandard2.0/Antlr4.Runtime.Standard.dll": {
+            "assemblyVersion": "4.10.1.0",
+            "fileVersion": "4.10.1.0"
+          }
+        }
+      },
+      "DSL-Runner/1.0.0": {
+        "dependencies": {
+          "Antlr4.Runtime.Standard": "4.10.1"
+        },
+        "runtime": {
+          "DSL-Runner.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Actuator/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Antlr4.Runtime.Standard/4.10.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-vjfMsN8YnoMGnS7ihSjhDMOQDfHLkkZcaMxMUgqRoQt5tRkl4sFArXxlS0wXh9ej4sViqLe6LjsIv/VaTKmHTQ==",
+      "path": "antlr4.runtime.standard/4.10.1",
+      "hashPath": "antlr4.runtime.standard.4.10.1.nupkg.sha512"
+    },
+    "DSL-Runner/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
