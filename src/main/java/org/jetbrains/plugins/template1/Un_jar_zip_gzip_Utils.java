@@ -8,29 +8,29 @@ import java.util.zip.ZipFile;
 import java.util.zip.ZipInputStream;
 
 /**
- * è§£å‹ jar,zip,gzipç­‰å‹ç¼©æ–‡ä»¶
- * æ—¶é—´ï¼š2018-04-25
+ * ½âÑ¹ jar,zip,gzipµÈÑ¹ËõÎÄ¼ş
+ * Ê±¼ä£º2018-04-25
  * @author Jason
  *
  */
 public class Un_jar_zip_gzip_Utils {
 
     /**
-     * è§£å‹jar,zip,gzipç­‰å‹ç¼©åŒ…
-     * @param jarpath   å‹ç¼©åŒ…å…¨è·¯å¾„å
-     * @param targetDir è§£å‹è‡³ç›®æ ‡ç›®å½•
+     * ½âÑ¹jar,zip,gzipµÈÑ¹Ëõ°ü
+     * @param jarpath   Ñ¹Ëõ°üÈ«Â·¾¶Ãû
+     * @param targetDir ½âÑ¹ÖÁÄ¿±êÄ¿Â¼
      */
     @SuppressWarnings("resource")
     public static void UnAllFile(String jarpath,String targetDir) {
 
         if(jarpath == null || targetDir == null) {
-            throw new NullPointerException("å‚æ•°ä¸ºç©º");
+            throw new NullPointerException("²ÎÊıÎª¿Õ");
         }
 
         try {
-            File file = new File(jarpath);      // å‹ç¼©æ–‡ä»¶,ä¾‹å¦‚ï¼šD:/lib/a.zip
-            ZipFile zipFile = new ZipFile(file);// å®ä¾‹åŒ–ZipFileï¼Œæ¯ä¸€ä¸ªzipå‹ç¼©æ–‡ä»¶éƒ½å¯ä»¥è¡¨ç¤ºä¸ºä¸€ä¸ªZipFile
-            //å®ä¾‹åŒ–ZipInputStreamå¯¹è±¡ï¼Œç”¨è¯¥ç±»çš„getNextEntry()æ–¹æ³•æ‹¿åˆ°æ¯ä¸ªZipEntryå¯¹è±¡
+            File file = new File(jarpath);      // Ñ¹ËõÎÄ¼ş,ÀıÈç£ºD:/lib/a.zip
+            ZipFile zipFile = new ZipFile(file);// ÊµÀı»¯ZipFile£¬Ã¿Ò»¸özipÑ¹ËõÎÄ¼ş¶¼¿ÉÒÔ±íÊ¾ÎªÒ»¸öZipFile
+            //ÊµÀı»¯ZipInputStream¶ÔÏó£¬ÓÃ¸ÃÀàµÄgetNextEntry()·½·¨ÄÃµ½Ã¿¸öZipEntry¶ÔÏó
             ZipInputStream zipInputStream = new ZipInputStream(new FileInputStream(file), Charset.forName("utf-8"));
 
             ZipEntry zipEntry = null;
@@ -42,7 +42,7 @@ public class Un_jar_zip_gzip_Utils {
                 if (! temp.getParentFile().exists())
                     temp.getParentFile().mkdirs();
                 OutputStream os = new FileOutputStream(temp);
-                //é€šè¿‡ZipFileçš„getInputStreamæ–¹æ³•æ‹¿åˆ°å…·ä½“çš„ZipEntryçš„è¾“å…¥æµ
+                //Í¨¹ıZipFileµÄgetInputStream·½·¨ÄÃµ½¾ßÌåµÄZipEntryµÄÊäÈëÁ÷
                 InputStream is = zipFile.getInputStream(zipEntry);
                 int len = 0;
                 while ((len = is.read()) != -1)

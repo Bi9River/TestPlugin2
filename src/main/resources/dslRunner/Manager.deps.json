@@ -23,6 +23,78 @@
           }
         }
       },
+      "dotenv.net/3.1.1": {
+        "runtime": {
+          "lib/netstandard2.1/dotenv.net.dll": {
+            "assemblyVersion": "3.1.1.0",
+            "fileVersion": "3.1.1.0"
+          }
+        }
+      },
+      "Google.Protobuf/3.21.0-rc1": {
+        "runtime": {
+          "lib/net5.0/Google.Protobuf.dll": {
+            "assemblyVersion": "3.21.0.0",
+            "fileVersion": "3.21.0.0"
+          }
+        }
+      },
+      "Grpc/2.46.1": {
+        "dependencies": {
+          "Grpc.Core": "2.46.1"
+        }
+      },
+      "Grpc.Core/2.46.1": {
+        "dependencies": {
+          "Grpc.Core.Api": "2.46.1",
+          "System.Memory": "4.5.3"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Grpc.Core.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.46.1.0"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/linux-arm64/native/libgrpc_csharp_ext.arm64.so": {
+            "rid": "linux-arm64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/linux-x64/native/libgrpc_csharp_ext.x64.so": {
+            "rid": "linux-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/native/libgrpc_csharp_ext.x64.dylib": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x64/native/grpc_csharp_ext.x64.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x86/native/grpc_csharp_ext.x86.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "Grpc.Core.Api/2.46.1": {
+        "dependencies": {
+          "System.Memory": "4.5.3"
+        },
+        "runtime": {
+          "lib/netstandard2.1/Grpc.Core.Api.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.46.1.0"
+          }
+        }
+      },
+      "System.Memory/4.5.3": {},
       "Actuator/1.0.0": {
         "dependencies": {
           "Antlr4.Runtime.Standard": "4.10.1",
@@ -34,7 +106,10 @@
       },
       "DSL-Runner/1.0.0": {
         "dependencies": {
-          "Antlr4.Runtime.Standard": "4.10.1"
+          "Antlr4.Runtime.Standard": "4.10.1",
+          "Google.Protobuf": "3.21.0-rc1",
+          "Grpc": "2.46.1",
+          "dotenv.net": "3.1.1"
         },
         "runtime": {
           "DSL-Runner.dll": {}
@@ -54,6 +129,48 @@
       "sha512": "sha512-vjfMsN8YnoMGnS7ihSjhDMOQDfHLkkZcaMxMUgqRoQt5tRkl4sFArXxlS0wXh9ej4sViqLe6LjsIv/VaTKmHTQ==",
       "path": "antlr4.runtime.standard/4.10.1",
       "hashPath": "antlr4.runtime.standard.4.10.1.nupkg.sha512"
+    },
+    "dotenv.net/3.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-SjU7/mnA1+cYLf0Bnf+8XNYmzfWn6I//mhu84sgfnrM+bvt6/1GMZK0wfrDVY8wRoZACkcLbmT9h28dJ0MtlTA==",
+      "path": "dotenv.net/3.1.1",
+      "hashPath": "dotenv.net.3.1.1.nupkg.sha512"
+    },
+    "Google.Protobuf/3.21.0-rc1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ecOx+dWChVr4UAcO8qOB6g3c+VZmEGZH5EVdJbRbzmslzAhyPg39SYFu1HA4fXIiMndOtfJS/MdB5aD31vq9IA==",
+      "path": "google.protobuf/3.21.0-rc1",
+      "hashPath": "google.protobuf.3.21.0-rc1.nupkg.sha512"
+    },
+    "Grpc/2.46.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-DFBSbL//fiHBULKeqzyHf4sWBtKhmlmUJsCJhcUMogZAOoBck/EOPkLK2vST0zON0aMeGV3KkqcJIQk8GpaiMA==",
+      "path": "grpc/2.46.1",
+      "hashPath": "grpc.2.46.1.nupkg.sha512"
+    },
+    "Grpc.Core/2.46.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-UlKAckb1QvCgZ1f0n5iiXve6kNsrmIgEtwxNboo6uxNAwBY4r9Mhsc3S7iXsO4CAx2F6AVOmdKnojE0+qr5FrA==",
+      "path": "grpc.core/2.46.1",
+      "hashPath": "grpc.core.2.46.1.nupkg.sha512"
+    },
+    "Grpc.Core.Api/2.46.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-3rm4VJLP6MHWXoQnF9kYvO57Rj7gBtAlsu5Y4XtMTrsy4hSolRKOychh0KzJkaOTTtJ5dg0i3QlslLR5SX0Seg==",
+      "path": "grpc.core.api/2.46.1",
+      "hashPath": "grpc.core.api.2.46.1.nupkg.sha512"
+    },
+    "System.Memory/4.5.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-3oDzvc/zzetpTKWMShs1AADwZjQ/36HnsufHRPcOjyRAAMLDlu2iD33MBI2opxnezcVUtXyqDXXjoFMOU9c7SA==",
+      "path": "system.memory/4.5.3",
+      "hashPath": "system.memory.4.5.3.nupkg.sha512"
     },
     "Actuator/1.0.0": {
       "type": "project",
